@@ -1,0 +1,13 @@
+.container
+  %section.header
+    %h2.title The best URL shortifying service
+  = form_for @link, html: { class: "links-form" } do |f|
+    - if @link.errors.any?
+      .row
+        - @link.errors.full_messages.each do |error|
+          .column= error
+    .row
+      .ten.columns
+        = f.text_field :url
+      .two.columns
+        = f.submit "SRTFY!"

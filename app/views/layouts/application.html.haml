@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+    %title Shrtme
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    %link{ href: '//fonts.googleapis.com/css?family=Raleway:400,300,600', rel: 'stylesheet', type: 'text/css' }
+  %body
+    = yield
